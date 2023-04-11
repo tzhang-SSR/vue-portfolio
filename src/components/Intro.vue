@@ -1,6 +1,6 @@
 <template>
   <div class="container top">
-    <div class="content introContent">
+    <div class="introContent">
       <div class="intro">
         <h1>Hi, I'm Teng Zhang.</h1>
         <p>A Front-End Engineer and beginner writer.</p>
@@ -22,6 +22,9 @@ h1 {
   animation-duration: 2s;
 }
 .introContent {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 125px 0;

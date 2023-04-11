@@ -1,0 +1,52 @@
+[
+    {
+      "time": "Jun 2021 - Present",
+      "title": "Frontend Engineer",
+      "company": "data.ai",
+      "description": [
+        "Practiced WCAG standard to continuously improve the accessibility of data.ai's web products",
+        "Participated in the development of data.ai Microsoft Excel Add-In to improve customer's experience in viewing and downloading data.ai datasets",
+        "Improved stability of data.ai products by working on the migration and deprecation of web page components",
+        "Used Next.js, TypeScript, and other technologies to develop innovative data analysis web reports and meanwhile handled the following data integration and functionality testing",
+        "Collaborated closely with cross-functional teams including UX and product management to enhance existing products, offering valuable insights and feedback to achieve our shared objectives more efficiently"
+      ]
+    },
+    {
+        "time":"May 2021  - Jul 2021",
+        "title": "H5 Developer",
+        "company": "CAC AUTO GROUP",
+        "description":[
+            "Developed a new management tool for CAC Sales representatives by creating the Sales Commission section of the dashboard in Angular and Docker, which allow them to check and manage detailed commission data",
+            "Enabled the higher-level Sales representatives to allocate commissions to subordinates online by creating the complete user flow of the commission allocation model with backend developers"
+        ]
+    },
+    {
+        "time":"Nov 2020 - Apr 2021",
+        "title": "Front End Developer",
+        "company": "RAWsb",
+        "description":["Collaborated with other Front End developers to design, develop and maintain the web pages of Collegiate Independent Study"]
+    },
+    {
+        "time":"May 2021  - Jul 2021",
+        "title": "Front End Developer",
+        "company": "Corelant",
+        "description":["Added login authentication features and form validation methods to Corelant's website using React Context and Formrik",
+    "Further improved website functionality by implementing the 'Forgot password' function including sending user emails through SMTP services and updating new passwords from the frontend page",
+"Developed highly customized blog page templates by using Strapi the headless CMS to help non-technicians update blogs"]
+    },
+    {
+        "time":"May 2020 - Aug 2020",
+        "title": "Front End Software Developer",
+        "company": "Three Monkeys Communication",
+        "description":["Collaborate with other FE engineers to rebuild 3MC's website homepage using Reactjs",
+    "Created 3MC's SaaS product “Mizaru” according to WCAG 2.1 standards with constant adjustments based on feedback from target users of the deaf-blind community",
+"Identified critical areas for improvement and implemented changes instantly to improve user experience throughout the development process"]
+    },
+    {
+        "time":"Jan 2019 - Apr 2019",
+        "title": "Web Developer",
+        "company": "Gleentown Education",
+        "description":["Increased GE's website visitors by 10% through improving the UI design with web languages and Elementor",
+    "Helped over 20 GE volunteers complete their online training programs by developing GE's own LMS with JavaScript and WordPress extensions"]
+    }
+  ]
