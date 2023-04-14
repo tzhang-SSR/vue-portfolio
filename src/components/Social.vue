@@ -22,11 +22,21 @@ export default {
           title: "ztengc5@gmail.com",
           link: "mailto: ztengc5@gmail.com",
           icon: MailIcon,
-          id: "mail",
+          isLong: true,
         },
       ],
       WeChatIcon,
     };
+  },
+  methods: {
+    getClass: function (isLong) {
+      console.log({ isLong });
+      let className = "socialRow";
+      if (isLong) {
+        className += " long";
+      }
+      return className;
+    },
   },
 };
 </script>
@@ -34,17 +44,16 @@ export default {
   <div class="social">
     <a
       :href="social.link"
-      class="socialRow"
+      :class="social.isLong ? 'socialRow long' : 'socialRow'"
       v-for="social in socials"
       :key="social.title"
-      :id="social.id"
     >
       <div class="title">{{ social.title }}</div>
       <div class="icon">
         <img :src="social.icon" :alt="social.title" />
       </div>
     </a>
-    <div class="socialRow">
+    <div class="socialRow long">
       <div class="title">WeChat: ThisAdair</div>
       <div class="icon">
         <img :src="WeChatIcon" alt="wechat" />
@@ -67,20 +76,18 @@ export default {
   height: 50px;
   margin-left: -200px;
   padding-left: 10px;
-  background-color: aquamarine;
   transition: 0.4s;
+  background-color: #41b883;
 }
-#mail {
+.socialRow.long {
   width: 275px;
   margin-left: -225px;
 }
-.socialRow:hover,
-#mail:hover {
+.socialRow:hover {
   margin-left: 0;
 }
 .socialRow .title {
   font-weight: bold;
-  /* display: flex; */
 }
 .socialRow .icon {
   display: flex;
@@ -88,6 +95,5 @@ export default {
   align-items: center;
   width: 50px;
   height: 50px;
-  background-color: red;
 }
 </style>

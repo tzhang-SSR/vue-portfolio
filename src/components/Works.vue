@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" id="works">
     <SectionHeader title="Works" />
     <div class="content workContent" :ref="refName">
       <ul class="timeline">
@@ -66,6 +66,7 @@ export default {
   position: relative;
   margin-bottom: 50px;
   padding-left: 50px;
+  /* background-color: red; */
   list-style: none;
 }
 
@@ -109,20 +110,20 @@ export default {
   display: block;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 20px;
-  background-color: #fff;
+  margin: 20px 0;
   z-index: 2;
 }
 
 .timeline li h3 {
-  font-size: 20px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
 .timeline li p {
   font-size: 16px;
-  line-height: 1.5;
+}
+.timeline li p,
+.timeline li h3,
+.timeline li time {
   max-width: 45%;
 }
 
@@ -134,7 +135,6 @@ export default {
   width: 40px;
   height: 40px;
   left: calc(50% - 20px);
-  background-color: #fff;
   border-radius: 50%;
   border: 2px solid #ccc;
   top: 0;
@@ -145,7 +145,6 @@ export default {
 .innerCircle {
   width: 20px;
   height: 20px;
-  background-color: #fff;
   border-radius: 50%;
   border: 2px solid #ccc;
 }

@@ -37,7 +37,7 @@ export default {
 };
 </script>
 <template>
-  <div class="container">
+  <div class="container" id="projects">
     <SectionHeader title="Projects" />
     <div class="content projectContent" :ref="refName">
       <div class="projectCard" v-for="project in projects" :key="project.title">
@@ -60,9 +60,6 @@ export default {
   </div>
 </template>
 <style scoped>
-.container {
-  background-color: beige;
-}
 .projectContent {
   height: 100%;
   padding: 50px;

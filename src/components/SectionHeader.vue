@@ -10,6 +10,9 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.onScroll);
   },
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
   methods: {
     onScroll() {
       const visibleHeight = 150;
@@ -49,8 +52,8 @@ h2 {
   opacity: 1;
 }
 .underline {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 150px;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #41b883;
 }
 </style>

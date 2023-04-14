@@ -78,7 +78,7 @@ export default {
 </script>
 
 <template>
-  <section class="container skills">
+  <section class="container skills" id="skills">
     <SectionHeader title="Skills" />
     <div class="content skillsContent" :ref="refName">
       <div class="summary">
@@ -122,9 +122,6 @@ export default {
 h2 {
   font-size: 38px;
   line-height: 57px;
-}
-.skills {
-  background-color: aqua;
 }
 .skillsContent {
   display: grid;
@@ -174,7 +171,7 @@ h2 {
 .skill-level span {
   display: block;
   height: 100%;
-  background-color: #007bff;
+  background-color: #41b883;
   border-radius: 5px;
   transition: width 0.5s ease-in-out;
 }

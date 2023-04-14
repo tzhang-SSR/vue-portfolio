@@ -1,5 +1,5 @@
 <template>
-  <div class="container top">
+  <div class="container top" id="home">
     <div class="introContent">
       <div class="intro">
         <h1>Hi, I'm Teng Zhang.</h1>
@@ -13,9 +13,6 @@
 <style scoped>
 h1 {
   font-size: 65px;
-}
-.top {
-  background-color: greenyellow;
 }
 .intro {
   animation: fade-top;
