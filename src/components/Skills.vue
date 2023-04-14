@@ -1,57 +1,75 @@
 <script>
 import SectionHeader from "./SectionHeader.vue";
+import scrollMixin from "../scrollmixin";
+import HTMLSVG from "../assets/logos/html.svg";
+import CSSSVG from "../assets/logos/css.svg";
+import JSSVG from "../assets/logos/javascript.svg";
+import TSSVG from "../assets/logos/typescript.svg";
+import ReactSVG from "../assets/logos/react.svg";
+import NextSVG from "../assets/logos/next.svg";
+import AngularSVG from "../assets/logos/angular.svg";
+import VueSVG from "../assets/logos/vue.svg";
+import WebpackSVG from "../assets/logos/webpack.svg";
+
 export default {
   name: "Skills",
-  mounted() {
-    window.addEventListener("scroll", this.onScroll);
+  props: {
+    refName: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     SectionHeader,
   },
-  methods: {
-    onScroll(event) {
-      const visibleHeight = 150;
-      const windowHeight = window.innerHeight;
-      const elementTop = this.$refs.content.getBoundingClientRect().top;
-      if (elementTop < windowHeight - visibleHeight) {
-        this.$refs.content.classList.add("active");
-      } else {
-        this.$refs.content.classList.remove("active");
-      }
-    },
-  },
+  mixins: [scrollMixin],
   data() {
     return {
       skillItems: [
         {
           title: "HTML",
-          icon: "fab fa-html5",
+          icon: HTMLSVG,
           level: 96,
         },
         {
           title: "CSS",
-          icon: "fab fa-css3-alt",
+          icon: CSSSVG,
           level: 95,
         },
         {
           title: "JavaScript",
-          icon: "fab fa-js",
+          icon: JSSVG,
           level: 99,
         },
         {
           title: "TypeScript",
-          icon: "fab fa-js",
+          icon: TSSVG,
           level: 89,
         },
         {
           title: "React.js",
-          icon: "fab fa-react",
+          icon: ReactSVG,
           level: 95,
         },
         {
           title: "Next.js",
-          icon: "fab fa-react",
+          icon: NextSVG,
           level: 85,
+        },
+        {
+          title: "Angular",
+          icon: AngularSVG,
+          level: 80,
+        },
+        {
+          title: "Vue.js",
+          icon: VueSVG,
+          level: 70,
+        },
+        {
+          title: "Webpack",
+          icon: WebpackSVG,
+          level: 75,
         },
       ],
     };
@@ -62,7 +80,7 @@ export default {
 <template>
   <section class="container skills">
     <SectionHeader title="Skills" />
-    <div class="content skillsContent" ref="content">
+    <div class="content skillsContent" :ref="refName">
       <div class="summary">
         <p>
           Hi! I'm a <strong>Frontend Engineer</strong> with a strong background
@@ -89,7 +107,7 @@ export default {
       <ul>
         <li v-for="skill in skillItems" :key="skill.title">
           <div class="skill-info">
-            <i :class="skill.icon"></i>
+            <img :src="skill.icon" :alt="skill.title" />
             <div>{{ skill.title }}</div>
           </div>
           <div class="skill-level">
@@ -115,6 +133,7 @@ h2 {
   opacity: 0;
   transition: 2s all ease;
   padding: 50px;
+  width: 60%;
 }
 .skillsContent.active {
   transform: translateY(0);
@@ -134,16 +153,14 @@ h2 {
   margin-bottom: 15px;
 }
 
-.skills i {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
 .skill-info {
   display: flex;
   align-items: center;
   text-align: left;
   display: flex;
+}
+.skill-info img {
+  margin-right: 10px;
 }
 
 .skill-level {

@@ -1,8 +1,15 @@
 <script>
 import works from "../assets/works.json";
 import SectionHeader from "./SectionHeader.vue";
+import scrollMixin from "../scrollmixin";
 export default {
   name: "Works",
+  props: {
+    refName: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       works,
@@ -11,13 +18,14 @@ export default {
   components: {
     SectionHeader,
   },
+  mixins: [scrollMixin],
 };
 </script>
 
 <template>
   <div class="container">
     <SectionHeader title="Works" />
-    <div class="content">
+    <div class="content workContent" :ref="refName">
       <ul class="timeline">
         <li v-for="work in works" :key="work.title">
           <time>{{ work.time }}</time>
@@ -101,7 +109,7 @@ export default {
   display: block;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-color: #fff;
   z-index: 2;
 }
@@ -109,7 +117,7 @@ export default {
 .timeline li h3 {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .timeline li p {
