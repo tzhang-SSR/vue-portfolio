@@ -53,8 +53,8 @@ export default {
         <img :src="social.icon" :alt="social.title" />
       </div>
     </a>
-    <div class="socialRow long">
-      <div class="title">WeChat: ThisAdair</div>
+    <div class="socialRow">
+      <div class="title">ThisAdair</div>
       <div class="icon">
         <img :src="WeChatIcon" alt="wechat" />
       </div>
@@ -72,9 +72,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  width: 250px;
+  width: 175px;
   height: 50px;
-  margin-left: -200px;
+  margin-left: -125px;
   padding-left: 10px;
   transition: 0.4s;
   background-color: #41b883;

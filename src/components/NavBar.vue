@@ -30,30 +30,27 @@ export default {
       ],
     };
   },
-
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     handleScroll() {
       const scrollY = window.pageYOffset;
-      console.log({ scrollY });
-      //   this.navItems.forEach((item) => {
-      //     const element = document.getElementById(item.id);
-      //     if (element) {
-      //       const sectionTop = element.offsetTop;
-      //       const sectionHeight = element.offsetHeight;
-      //       if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
-      //         item.isActive = true;
-      //       } else {
-      //         item.isActive = false;
-      //       }
-      //     }
-      //   });
-    },
-    mounted() {
-      console.log("mounted");
-      window.addEventListener("scroll", this.handleScroll);
-    },
-    beforeDestroy() {
-      window.removeEventListener("scroll", this.handleScroll);
+      this.navItems.forEach((item) => {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const sectionTop = element.offsetTop;
+          const sectionHeight = element.offsetHeight;
+          if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+            item.isActive = true;
+          } else {
+            item.isActive = false;
+          }
+        }
+      });
     },
   },
 };
@@ -63,7 +60,11 @@ export default {
   <div class="navbar">
     <div class="navbarContent">
       <ul class="navItems">
-        <li v-for="item in navItems" :key="item.id">
+        <li
+          v-for="item in navItems"
+          :key="item.id"
+          :class="item.isActive && 'active'"
+        >
           <a :href="item.link">{{ item.title }}</a>
         </li>
       </ul>
@@ -76,13 +77,13 @@ export default {
   top: 0;
   width: 100%;
   min-width: 300px;
-  height: 50px;
+  height: 80px;
   z-index: 100;
-  background-color: #fff;
+  background-color: #f5f0ff;
 }
 .navbarContent {
   position: absolute;
-  right: 50px;
+  right: 10px;
   width: 25%;
   height: 100%;
 }

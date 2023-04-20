@@ -123,6 +123,12 @@ h2 {
   font-size: 38px;
   line-height: 57px;
 }
+img {
+  transition: transform 0.3s;
+}
+img:hover {
+  transform: scale(1.5);
+}
 .skillsContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

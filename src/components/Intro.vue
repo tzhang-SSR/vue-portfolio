@@ -18,9 +18,11 @@ h1 {
   animation: fade-top;
   animation-duration: 2s;
 }
+
 .introContent {
   width: 60%;
-  height: 100%;
+  min-width: 400px;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;

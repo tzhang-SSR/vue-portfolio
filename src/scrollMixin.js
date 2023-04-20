@@ -11,7 +11,7 @@ export default {
       this.onScroll(this.$refs[this.refName])
     );
   },
-  destroyed() {
+  beforeDestroy() {
     // Remove event listener for scroll event
     window.removeEventListener("scroll", () =>
       this.onScroll(this.$refs[this.refName])

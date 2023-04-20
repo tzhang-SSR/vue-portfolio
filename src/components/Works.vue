@@ -55,8 +55,7 @@ export default {
   bottom: 0;
   left: 50%;
   width: 2px;
-  background-color: #ccc;
-  transform: translateX(-50%);
+  background-color: #34495e;
 }
 
 .timeline li {
@@ -66,7 +65,6 @@ export default {
   position: relative;
   margin-bottom: 50px;
   padding-left: 50px;
-  /* background-color: red; */
   list-style: none;
 }
 
@@ -83,7 +81,7 @@ export default {
   height: 20px;
   border-radius: 50%;
   background-color: #fff;
-  border: 2px solid #ccc;
+  border: 2px solid #34495e;
   z-index: 2;
 }
 
@@ -93,7 +91,7 @@ export default {
   top: 15px;
   width: 30%;
   height: 2px;
-  background-color: #ccc;
+  background-color: #34495e;
 }
 
 .timeline li:before,
@@ -136,7 +134,7 @@ export default {
   height: 40px;
   left: calc(50% - 20px);
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid #34495e;
   top: 0;
   display: flex;
   align-items: center;
@@ -146,6 +144,6 @@ export default {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid #34495e;
 }
 </style>

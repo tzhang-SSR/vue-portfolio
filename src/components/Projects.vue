@@ -68,11 +68,16 @@ export default {
 .projectCard {
   width: 500px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: 2px solid #34495e;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
+  transition: transform 0.3s;
 }
+.projectCard:hover {
+  transform: scale(1.05);
+}
+
 .projectInfo > * {
   margin-bottom: 10px;
 }
@@ -83,6 +88,10 @@ export default {
 }
 .projectLinks > a {
   margin-right: 10px;
+}
+
+a:hover {
+  border-bottom: 2px solid #41b883;
 }
 .projectStacks > img {
   margin-right: 5px;
