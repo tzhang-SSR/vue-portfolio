@@ -4,37 +4,61 @@ export default {
     return {
       navItems: [
         {
-          title: "Home",
+          title: this.$t("sectionTitles.home"),
           link: "#home",
           id: "home",
           isActive: true,
         },
         {
-          title: "Skills",
+          title: this.$t("sectionTitles.skills"),
           link: "#skills",
           id: "skills",
           isActive: false,
         },
         {
-          title: "Works",
+          title: this.$t("sectionTitles.works"),
           link: "#works",
           id: "works",
           isActive: false,
         },
         {
-          title: "Projects",
+          title: this.$t("sectionTitles.projects"),
           link: "#projects",
           id: "projects",
           isActive: false,
         },
       ],
+      activeId: "home",
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    // window.addEventListener("scroll", this.handleScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // setActiveId(entry.target.id);
+            this.activeId = entry.target.id;
+          }
+        });
+      },
+      { rootMargin: `0% 0% -80% 0%` }
+    );
+    this.navItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
+    // window.removeEventListener("scroll", this.handleScroll);
+    this.navItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        observer.unobserve(element);
+      }
+    });
   },
   methods: {
     handleScroll() {
@@ -63,7 +87,7 @@ export default {
         <li
           v-for="item in navItems"
           :key="item.id"
-          :class="item.isActive && 'active'"
+          :class="item.id === activeId && 'active'"
         >
           <a :href="item.link">{{ item.title }}</a>
         </li>

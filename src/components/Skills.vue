@@ -72,6 +72,8 @@ export default {
           level: 75,
         },
       ],
+      summary: this.$tm("skillSummary"),
+      title: this.$t("sectionTitles.skills"),
     };
   },
 };
@@ -79,29 +81,11 @@ export default {
 
 <template>
   <section class="container skills" id="skills">
-    <SectionHeader title="Skills" />
+    <SectionHeader :title="title" />
     <div class="content skillsContent" :ref="refName">
       <div class="summary">
-        <p>
-          Hi! I'm a <strong>Frontend Engineer</strong> with a strong background
-          in modern Frontend libraries and frameworks such as React.js, Next.js,
-          Vue.js, and Bootstrap. I specialize in building high-performance web
-          applications using HTML, CSS, JavaScript, and TypeScript, and have 3
-          years of experience in this field.
-        </p>
-        <br />
-        <p>
-          Currently working as a Frontend Engineer at data.ai, I develop
-          innovative data analysis web reports and handle data integration and
-          functionality testing. My hard-working nature, along with an
-          innovative mindset, helps me tackle complex challenges and come up
-          with fresh solutions.
-        </p>
-        <br />
-        <p>
-          With a strong work ethic, I am dedicated to ensuring the success of
-          any project or task I undertake. I am always willing to go the extra
-          mile and take pride in delivering exceptional results.
+        <p v-for="(message, index) in summary" :key="index">
+          {{ message }}
         </p>
       </div>
       <ul>

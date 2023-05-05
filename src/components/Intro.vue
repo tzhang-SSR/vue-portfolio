@@ -1,9 +1,10 @@
+<script></script>
 <template>
   <div class="container top" id="home">
     <div class="introContent">
       <div class="intro">
-        <h1>Hi, I'm Teng Zhang.</h1>
-        <p>A Front-End Engineer and beginner writer.</p>
+        <h1>{{ $t("greeting") }}</h1>
+        <p>{{ $t("intro") }}</p>
       </div>
       <div class="profile"></div>
     </div>

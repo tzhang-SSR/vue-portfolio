@@ -1,0 +1,15 @@
+{
+  "greeting": "Hi, I'm Teng Zhang.",
+  "intro": "A Front-End Engineer and beginner writer",
+  "sectionTitles": {
+    "home": "Home",
+    "skills": "Skills",
+    "works": "Works",
+    "projects": "Projects"
+  },
+  "skillSummary": [
+    "Hi! I'm a Frontend Engineer with a strong background in modern Frontend libraries and frameworks such as React.js, Next.js, Vue.js, and Bootstrap. I specialize in building high-performance web applications using HTML, CSS, JavaScript, and TypeScript, and have 3 years of experience in this field.",
+    "Currently working as a Frontend Engineer at data.ai, I develop innovative data analysis web reports and handle data integration and functionality testing. My hard-working nature, along with an innovative mindset, helps me tackle complex challenges and come up with fresh solutions.",
+    "With a strong work ethic, I am dedicated to ensuring the success of any project or task I undertake. I am always willing to go the extra mile and take pride in delivering exceptional results."
+  ]
+}
