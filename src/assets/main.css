@@ -4,6 +4,10 @@ body {
   background-color: #f5f0ff;
   color: #34495E;
   scroll-behavior: smooth;
+}
+
+select {
+  color: #34495E;
 
 }
 

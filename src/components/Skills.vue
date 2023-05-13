@@ -72,9 +72,17 @@ export default {
           level: 75,
         },
       ],
-      summary: this.$tm("skillSummary"),
-      title: this.$t("sectionTitles.skills"),
+      // summary: this.$tm("skillSummary"),
+      // title: this.$t("sectionTitles.skills"),
     };
+  },
+  computed: {
+    summary() {
+      return this.$tm("skillSummary");
+    },
+    title() {
+      return this.$t("sectionTitles.skills");
+    },
   },
 };
 </script>

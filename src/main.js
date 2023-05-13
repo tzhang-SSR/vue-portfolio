@@ -12,7 +12,7 @@ const messages = {
 };
 
 const i18n = createI18n({
-  locale: "cn",
+  locale: "en",
   messages,
 });
 

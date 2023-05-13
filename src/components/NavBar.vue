@@ -1,8 +1,14 @@
 <script>
+import LanguagePicker from "./LanguagePicker.vue";
 export default {
   data() {
     return {
-      navItems: [
+      activeId: "home",
+    };
+  },
+  computed: {
+    navItems() {
+      return [
         {
           title: this.$t("sectionTitles.home"),
           link: "#home",
@@ -27,9 +33,8 @@ export default {
           id: "projects",
           isActive: false,
         },
-      ],
-      activeId: "home",
-    };
+      ];
+    },
   },
   mounted() {
     // window.addEventListener("scroll", this.handleScroll);
@@ -77,6 +82,9 @@ export default {
       });
     },
   },
+  components: {
+    LanguagePicker,
+  },
 };
 </script>
 
@@ -90,6 +98,9 @@ export default {
           :class="item.id === activeId && 'active'"
         >
           <a :href="item.link">{{ item.title }}</a>
+        </li>
+        <li>
+          <LanguagePicker />
         </li>
       </ul>
     </div>
@@ -108,7 +119,7 @@ export default {
 .navbarContent {
   position: absolute;
   right: 10px;
-  width: 25%;
+  width: 35%;
   height: 100%;
 }
 .navItems {
