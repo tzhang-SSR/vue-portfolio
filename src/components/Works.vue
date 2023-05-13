@@ -1,5 +1,4 @@
 <script>
-import works from "../assets/works.json";
 import SectionHeader from "./SectionHeader.vue";
 import scrollMixin from "../scrollmixin";
 export default {
@@ -10,10 +9,13 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      works,
-    };
+  computed: {
+    works() {
+      return this.$tm("works");
+    },
+    title() {
+      return this.$tm("sectionTitles.works");
+    },
   },
   components: {
     SectionHeader,
@@ -24,7 +26,7 @@ export default {
 
 <template>
   <div class="container" id="works">
-    <SectionHeader title="Works" />
+    <SectionHeader :title="title" />
     <div class="content workContent" :ref="refName">
       <ul class="timeline">
         <li v-for="work in works" :key="work.title">

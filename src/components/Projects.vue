@@ -21,24 +21,32 @@ export default {
   mixins: [scrollMixin],
   data() {
     return {
-      projects: [
-        {
-          title: "YoutubePlaylist Upgrade",
-          description:
-            "A web app that upgrade your experience browsing saved videos from your precious playlists.",
-          image: Screenshot,
-          live: "https://youtube-playlist-upgrade.vercel.app/",
-          github: "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
-          stacks: [HTMLSVG, CSSSVG, JSSVG, TSSVG, AngularSVG],
-        },
-      ],
+      // projects: [
+      //   {
+      //     title: "YoutubePlaylist Upgrade",
+      //     description:
+      //       "A web app that upgrade your experience browsing saved videos from your precious playlists.",
+      //     image: Screenshot,
+      //     live: "https://youtube-playlist-upgrade.vercel.app/",
+      //     github: "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
+      //     stacks: [HTMLSVG, CSSSVG, JSSVG, TSSVG, AngularSVG],
+      //   },
+      // ],
     };
+  },
+  computed: {
+    title() {
+      return this.$tm("sectionTitles.projects");
+    },
+    projects() {
+      return this.$tm("projects");
+    },
   },
 };
 </script>
 <template>
   <div class="container" id="projects">
-    <SectionHeader title="Projects" />
+    <SectionHeader :title="title" />
     <div class="content projectContent" :ref="refName">
       <div class="projectCard" v-for="project in projects" :key="project.title">
         <div class="projectImage">

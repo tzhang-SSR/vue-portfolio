@@ -11,5 +11,81 @@
     "Hi! I'm a Frontend Engineer with a strong background in modern Frontend libraries and frameworks such as React.js, Next.js, Vue.js, and Bootstrap. I specialize in building high-performance web applications using HTML, CSS, JavaScript, and TypeScript, and have 3 years of experience in this field.",
     "Currently working as a Frontend Engineer at data.ai, I develop innovative data analysis web reports and handle data integration and functionality testing. My hard-working nature, along with an innovative mindset, helps me tackle complex challenges and come up with fresh solutions.",
     "With a strong work ethic, I am dedicated to ensuring the success of any project or task I undertake. I am always willing to go the extra mile and take pride in delivering exceptional results."
+  ],
+  "works": [
+    {
+      "time": "Jun 2021 - Present",
+      "title": "Frontend Engineer",
+      "company": "data.ai",
+      "description": [
+        "Practiced WCAG standard to continuously improve the accessibility of data.ai's web products",
+        "Participated in the development of data.ai Microsoft Excel Add-In to improve customer's experience in viewing and downloading data.ai datasets",
+        "Improved stability of data.ai products by working on the migration and deprecation of web page components",
+        "Used Next.js, TypeScript, and other technologies to develop innovative data analysis web reports and meanwhile handled the following data integration and functionality testing",
+        "Collaborated closely with cross-functional teams including UX and product management to enhance existing products, offering valuable insights and feedback to achieve our shared objectives more efficiently"
+      ]
+    },
+    {
+      "time": "May 2021  - Jul 2021",
+      "title": "H5 Developer",
+      "company": "CAC Auto Group",
+      "description": [
+        "Developed a new management tool for CAC Sales representatives by creating the Sales Commission section of the dashboard in Angular and Docker, which allow them to check and manage detailed commission data",
+        "Enabled the higher-level Sales representatives to allocate commissions to subordinates online by creating the complete user flow of the commission allocation model with backend developers"
+      ]
+    },
+    {
+      "time": "Nov 2020 - Apr 2021",
+      "title": "Front End Developer",
+      "company": "RAWsb",
+      "description": [
+        "Collaborated with other Front End developers to design, develop and maintain the web pages of Collegiate Independent Study"
+      ]
+    },
+    {
+      "time": "May 2021  - Jul 2021",
+      "title": "Front End Developer",
+      "company": "Corelant",
+      "description": [
+        "Added login authentication features and form validation methods to Corelant's website using React Context and Formrik",
+        "Further improved website functionality by implementing the 'Forgot password' function including sending user emails through SMTP services and updating new passwords from the frontend page",
+        "Developed highly customized blog page templates by using Strapi the headless CMS to help non-technicians update blogs"
+      ]
+    },
+    {
+      "time": "May 2020 - Aug 2020",
+      "title": "Front End Software Developer",
+      "company": "Three Monkeys Communication",
+      "description": [
+        "Collaborate with other FE engineers to rebuild 3MC's website homepage using Reactjs",
+        "Created 3MC's SaaS product “Mizaru” according to WCAG 2.1 standards with constant adjustments based on feedback from target users of the deaf-blind community",
+        "Identified critical areas for improvement and implemented changes instantly to improve user experience throughout the development process"
+      ]
+    },
+    {
+      "time": "Jan 2019 - Apr 2019",
+      "title": "Web Developer",
+      "company": "Gleentown Education",
+      "description": [
+        "Increased GE's website visitors by 10% through improving the UI design with web languages and Elementor",
+        "Helped over 20 GE volunteers complete their online training programs by developing GE's own LMS with JavaScript and WordPress extensions"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "YouTubePlaylist Upgrade",
+      "description": "A web app that upgrade your experience browsing saved videos from your precious playlists.",
+      "image": "src/assets/screenshot.png",
+      "live": "https://youtube-playlist-upgrade.vercel.app/",
+      "github": "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
+      "stacks": [
+        "src/assets/logos/html.svg",
+        "src/assets/logos/css.svg",
+        "src/assets/logos/javascript.svg",
+        "src/assets/logos/typescript.svg",
+        "src/assets/logos/angular.svg"
+      ]
+    }
   ]
 }

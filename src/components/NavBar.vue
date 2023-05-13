@@ -143,7 +143,6 @@ li.active {
   border-bottom: 2px solid #41b883;
 }
 a {
-  font-weight: 500;
   letter-spacing: 0.5px;
 }
 </style>

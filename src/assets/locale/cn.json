@@ -11,5 +11,73 @@
     "前端工程师一枚。熟悉React、Next.js、Vue.js、Angular和Bootstrap等常用前端库和框架。擅长使用 HTML、CSS、JavaScript 和 TypeScript构建高性能网站和Web应用程序。已在相关领域拥有近3年的经验。",
     "目前在 data.ai 任职前端工程师。主要工作包括使用Next.js开发Web报告来为客户提供可视化的应用数据分析，同时负责对接后端数据接口和编写单元测试。",
     "上进心强，关注行业前景。积极学习日新月异的前端技术，并灵活运用到实际操作中。对待工作认真负责，善于沟通和协调。有较强的团队精神。常常与后端、UI等多个部门对接进行跨部门合作。"
+  ],
+  "works": [
+    {
+      "time": "2021.06 ~ 至今",
+      "title": "前端工程师",
+      "company": "data.ai",
+      "description": [
+        "根据W3C标准持续改善data.ai网页产品的Web无障碍功能",
+        "使用Next.js框架和TypeSciprt等前端技术持续参与data.ai多项核心数据报告产品的开发，同时通过Jest编写单元测试来检测新功能的准确性和稳定性",
+        "灵活掌握内部编程语言AQL（类graphQL）的使用，以根据前端需求获取精确服务端数据",
+        "与UX和产品管理在内的跨职能团队密切合作，致力于不断提升现有产品的质量"
+      ]
+    },
+
+    {
+      "time": "2021.06 ~ 2021.08",
+      "title": "Web前端开发工程师",
+      "company": "CAC Auto Group",
+      "description": [
+        "使用了Angular框架和Docker开发建立了CAC个人中心的管理界面来帮助公司内部销售人员管理和查看个人的销售数据",
+        "与产品管理团队合作优化了CAC销售人员的提成分配系统以帮助高级销售根据需求自由分配的分成",
+        "指导其他工程师学习Git工具以更好地进行代码的版本控制，在code review时提供反馈和建议确保代码的质量和一致性"
+      ]
+    },
+    {
+      "time": "2021.05 ~ 2021.08",
+      "title": "前端工程师",
+      "company": "Corelant",
+      "description": [
+        "使用React框架和表格工具Formik重建了Corelant网站UI，并通过添加用户注册，登录和忘记密码等功能完善了网站的用户系统",
+        "利用 headless CMS Strapi创立了Corelant的动态博客页面，方便非技术人员随时编辑更新博客",
+        "与CTO合作制定了内部代码规范，通过提升代码的可读性和可重用性来优化Corelant网站系统的代码质量"
+      ]
+    },
+    {
+      "time": "2020.05 ~ 2020.08",
+      "title": "Web前端开发志愿者",
+      "company": "汇猿交流",
+      "description": [
+        "使用前端框架React框架和CSS library Bootstrap重建了汇猿的官网页面，并根据WCAG2.1标准为网站主要视听障碍群体用户添加了Web无障碍的功能",
+        "与其他前端工程师合作共同开发汇猿旗下的产品应用Mizaru来为视听障碍群众提供专人服务，开发过程中使用Redux架构来控制应用的全局状态，包括用户的登陆登出和数据采集"
+      ]
+    },
+    {
+      "time": "2019.01 ~ 2019.04",
+      "title": "网络志愿者",
+      "company": "格林学堂",
+      "description": [
+        "使用前端编程语言HTML,CSS,以及JavaScript优化格林学堂的WordPress官网， 设计并创建了多个页面来展示格林过去五年的支教成果",
+        "结合WordPress的插件创建了格林专有的线上学习系统，帮助了20多个格林暑期志愿者完成线上培训以协助志愿者的暑期支教活动"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "油管视频收藏夹编辑器",
+      "description": "基于YouTube收藏夹的播放列表编辑器，提供更自由的收藏夹视频查看体验，使用户可以更轻松快捷地点击添加、删除和组织列表内视频",
+      "image": "src/assets/screenshot.png",
+      "live": "https://youtube-playlist-upgrade.vercel.app/",
+      "github": "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
+      "stacks": [
+        "src/assets/logos/html.svg",
+        "src/assets/logos/css.svg",
+        "src/assets/logos/javascript.svg",
+        "src/assets/logos/typescript.svg",
+        "src/assets/logos/angular.svg"
+      ]
+    }
   ]
 }

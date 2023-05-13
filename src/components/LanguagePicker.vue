@@ -1,6 +1,10 @@
 <script>
+import vClickOutside from "v-click-outside";
 export default {
   name: "LanguagePicker",
+  directives: {
+    ClickOutside: vClickOutside.directives,
+  },
   data() {
     return {
       locales: ["en", "cn"],
@@ -16,36 +20,49 @@ export default {
     changeLocale(val) {
       this.$i18n.locale = val;
     },
+    onClickOutside() {
+      this.showMenu = false;
+    },
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
   },
 };
 </script>
 <template>
-  <button class="pickerBtn" @click="() => (showMenu = !showMenu)">
-    {{ localeMap[this.$i18n.locale] }}
-  </button>
-  <div class="pickerMenu" v-if="showMenu">
-    <ul>
-      <li
-        v-for="locale in locales"
-        :key="locale"
-        :value="locale"
-        @click="changeLocale(locale)"
-        :class="locale === this.$i18n.locale && 'active'"
-      >
-        {{ localeMap[locale] }}
-      </li>
-    </ul>
+  <div class="picker" v-click-outside="onClickOutside">
+    <button class="pickerBtn" @click="toggleMenu">
+      <span> {{ localeMap[this.$i18n.locale] }}</span>
+    </button>
+    <Transition>
+      <div class="pickerMenu" v-if="showMenu">
+        <ul>
+          <li
+            v-for="locale in locales"
+            :key="locale"
+            :value="locale"
+            @click="changeLocale(locale)"
+            :class="locale === this.$i18n.locale && 'active'"
+          >
+            {{ localeMap[locale] }}
+          </li>
+        </ul>
+      </div>
+    </Transition>
   </div>
 </template>
 <style scoped>
 .pickerBtn {
   background-color: transparent;
   border: none;
-  font-size: 1.2rem;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
   min-width: 100px;
   text-align: center;
+  color: #34495e;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px;
 }
 .pickerMenu {
   position: absolute;
@@ -66,5 +83,14 @@ li.active {
 }
 li:hover {
   background-color: #41b883;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
