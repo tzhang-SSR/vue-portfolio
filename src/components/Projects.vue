@@ -1,12 +1,6 @@
 <script>
 import SectionHeader from "./SectionHeader.vue";
 import scrollMixin from "../scrollmixin";
-import HTMLSVG from "../assets/logos/html.svg";
-import CSSSVG from "../assets/logos/css.svg";
-import JSSVG from "../assets/logos/javascript.svg";
-import TSSVG from "../assets/logos/typescript.svg";
-import AngularSVG from "../assets/logos/angular.svg";
-import Screenshot from "../assets/screenshot.png";
 
 export default {
   props: {
@@ -19,21 +13,6 @@ export default {
     SectionHeader,
   },
   mixins: [scrollMixin],
-  data() {
-    return {
-      // projects: [
-      //   {
-      //     title: "YoutubePlaylist Upgrade",
-      //     description:
-      //       "A web app that upgrade your experience browsing saved videos from your precious playlists.",
-      //     image: Screenshot,
-      //     live: "https://youtube-playlist-upgrade.vercel.app/",
-      //     github: "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
-      //     stacks: [HTMLSVG, CSSSVG, JSSVG, TSSVG, AngularSVG],
-      //   },
-      // ],
-    };
-  },
   computed: {
     title() {
       return this.$tm("sectionTitles.projects");
@@ -49,8 +28,8 @@ export default {
     <SectionHeader :title="title" />
     <div class="content projectContent" :ref="refName">
       <div class="projectCard" v-for="project in projects" :key="project.title">
-        <div class="projectImage">
-          <img :src="project.image" width="400" height="250" />
+        <div>
+          <img class="projectImage" :src="project.image" />
         </div>
         <div class="projectInfo">
           <h3>{{ project.title }}</h3>
@@ -75,12 +54,16 @@ export default {
 
 .projectCard {
   width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   border: 2px solid #34495e;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s;
+}
+.projectImage {
+  max-width: 100%;
 }
 .projectCard:hover {
   transform: scale(1.05);
@@ -91,7 +74,7 @@ export default {
 }
 .projectInfo {
   margin: 0 auto;
-  width: 400px;
+  max-width: 100%;
   text-align: left;
 }
 .projectLinks > a {
@@ -103,5 +86,10 @@ a:hover {
 }
 .projectStacks > img {
   margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+  .projectCard {
+    width: 60%;
+  }
 }
 </style>

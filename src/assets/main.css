@@ -48,6 +48,10 @@ a {
   transition: 0.4s;
 }
 
+ul {
+  padding: 0;
+}
+
 /* Set the width and height of the scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

@@ -50,6 +50,7 @@ export default {
   list-style: none;
 }
 
+/* 树干/trunk */
 .timeline:before {
   content: "";
   position: absolute;
@@ -67,14 +68,10 @@ export default {
   position: relative;
   margin-bottom: 50px;
   padding-left: 50px;
-  list-style: none;
+  padding-top: 20px;
 }
 
-.timeline li:nth-child(even) {
-  align-items: flex-end;
-  padding-right: 50px;
-}
-
+/* 树叶/leaf */
 .timeline li:before {
   content: "";
   position: absolute;
@@ -87,6 +84,7 @@ export default {
   z-index: 2;
 }
 
+/* 树枝/branch  */
 .timeline li:after {
   content: "";
   position: absolute;
@@ -100,6 +98,12 @@ export default {
 .timeline li:after {
   left: 20%;
 }
+/* 为了美观，偶数序号的树枝在PC界面上在右边，移动端屏幕保持一直伸向左边  */
+.timeline li:nth-child(even) {
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
 .timeline li:nth-child(even):before,
 .timeline li:nth-child(even):after {
   left: auto;
@@ -123,6 +127,7 @@ export default {
 }
 .timeline li p,
 .timeline li h3,
+.timeline li h4,
 .timeline li time {
   max-width: 45%;
 }
@@ -147,5 +152,17 @@ export default {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #34495e;
+}
+@media screen and (max-width: 768px) {
+  .timeline li:nth-child(even) {
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+
+  .timeline li:nth-child(even):before,
+  .timeline li:nth-child(even):after {
+    left: 20%;
+    right: auto;
+  }
 }
 </style>

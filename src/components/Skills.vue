@@ -1,15 +1,15 @@
 <script>
 import SectionHeader from "./SectionHeader.vue";
 import scrollMixin from "../scrollmixin";
-import HTMLSVG from "../assets/logos/html.svg";
-import CSSSVG from "../assets/logos/css.svg";
-import JSSVG from "../assets/logos/javascript.svg";
-import TSSVG from "../assets/logos/typescript.svg";
-import ReactSVG from "../assets/logos/react.svg";
-import NextSVG from "../assets/logos/next.svg";
-import AngularSVG from "../assets/logos/angular.svg";
-import VueSVG from "../assets/logos/vue.svg";
-import WebpackSVG from "../assets/logos/webpack.svg";
+import HTMLSVG from "../assets/icons/html.svg";
+import CSSSVG from "../assets/icons/css.svg";
+import JSSVG from "../assets/icons/javascript.svg";
+import TSSVG from "../assets/icons/typescript.svg";
+import ReactSVG from "../assets/icons/react.svg";
+import NextSVG from "../assets/icons/next.svg";
+import AngularSVG from "../assets/icons/angular.svg";
+import VueSVG from "../assets/icons/vue.svg";
+import WebpackSVG from "../assets/icons/webpack.svg";
 
 export default {
   name: "Skills",
@@ -72,8 +72,6 @@ export default {
           level: 75,
         },
       ],
-      // summary: this.$tm("skillSummary"),
-      // title: this.$t("sectionTitles.skills"),
     };
   },
   computed: {
@@ -91,12 +89,12 @@ export default {
   <section class="container skills" id="skills">
     <SectionHeader :title="title" />
     <div class="content skillsContent" :ref="refName">
-      <div class="summary">
+      <div class="skillSummary">
         <p v-for="(message, index) in summary" :key="index">
           {{ message }}
         </p>
       </div>
-      <ul>
+      <ul class="skillProgress">
         <li v-for="skill in skillItems" :key="skill.title">
           <div class="skill-info">
             <img :src="skill.icon" :alt="skill.title" />
@@ -122,17 +120,24 @@ img:hover {
   transform: scale(1.5);
 }
 .skillsContent {
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
   transform: translateY(150px);
   opacity: 0;
   transition: 2s all ease;
   padding: 50px;
-  width: 60%;
+  width: 70%;
 }
 .skillsContent.active {
   transform: translateY(0);
   opacity: 1;
+}
+
+.skillSummary,
+.skillProgress {
+  max-width: 80%;
 }
 
 .skills h2 {
@@ -159,7 +164,8 @@ img:hover {
 }
 
 .skill-level {
-  min-width: 300px;
+  width: 50%;
+  min-width: 100px;
   height: 10px;
   background-color: #ddd;
   border-radius: 5px;
@@ -172,5 +178,12 @@ img:hover {
   background-color: #41b883;
   border-radius: 5px;
   transition: width 0.5s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .skillsContent {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 80%;
+  }
 }
 </style>

@@ -72,11 +72,11 @@
       "live": "https://youtube-playlist-upgrade.vercel.app/",
       "github": "https://github.com/tzhang-SSR/youtube-playlist-upgrade",
       "stacks": [
-        "src/assets/logos/html.svg",
-        "src/assets/logos/css.svg",
-        "src/assets/logos/javascript.svg",
-        "src/assets/logos/typescript.svg",
-        "src/assets/logos/angular.svg"
+        "src/assets/icons/html.svg",
+        "src/assets/icons/css.svg",
+        "src/assets/icons/javascript.svg",
+        "src/assets/icons/typescript.svg",
+        "src/assets/icons/angular.svg"
       ]
     }
   ]

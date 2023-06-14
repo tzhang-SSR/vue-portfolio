@@ -1,8 +1,8 @@
 <script>
-import GitHubIcon from "../assets/logos/github.svg";
-import LinkedInIcon from "../assets/logos/linkedin.svg";
-import WeChatIcon from "../assets/logos/wechat.svg";
-import MailIcon from "../assets/logos/mail.svg";
+import GitHubIcon from "../assets/icons/github.svg";
+import LinkedInIcon from "../assets/icons/linkedin.svg";
+import WeChatIcon from "../assets/icons/wechat.svg";
+import MailIcon from "../assets/icons/mail.svg";
 export default {
   name: "Social",
   data() {
