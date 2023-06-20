@@ -42,12 +42,10 @@ export default {
     },
   },
   mounted() {
-    // window.addEventListener("scroll", this.handleScroll);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // setActiveId(entry.target.id);
             this.activeId = entry.target.id;
           }
         });
@@ -62,7 +60,6 @@ export default {
     });
   },
   beforeDestroy() {
-    // window.removeEventListener("scroll", this.handleScroll);
     this.navItems.forEach((item) => {
       const element = document.getElementById(item.id);
       if (element) {
@@ -71,21 +68,6 @@ export default {
     });
   },
   methods: {
-    handleScroll() {
-      const scrollY = window.pageYOffset;
-      this.navItems.forEach((item) => {
-        const element = document.getElementById(item.id);
-        if (element) {
-          const sectionTop = element.offsetTop;
-          const sectionHeight = element.offsetHeight;
-          if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
-            item.isActive = true;
-          } else {
-            item.isActive = false;
-          }
-        }
-      });
-    },
     openNavMenu() {
       this.showNavMenu = true;
     },
@@ -124,6 +106,7 @@ export default {
           v-for="item in navItems"
           :key="item.id"
           :class="item.id === activeId && 'active'"
+          @click="closeNavMenu"
         >
           <a :href="item.link">{{ item.title }}</a>
         </li>
@@ -144,9 +127,7 @@ export default {
 }
 .navbarContent {
   position: absolute;
-  right: 10px;
-  width: 35%;
-  height: 100%;
+  right: 0;
 }
 ul {
   padding: 0;

@@ -79,7 +79,6 @@ ul {
 
 .content {
   width: 80%;
-  min-width: 800px;
   margin: 0 auto;
   transform: translateY(150px);
   opacity: 0;

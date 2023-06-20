@@ -109,47 +109,42 @@ export default {
   </section>
 </template>
 <style scoped>
-h2 {
-  font-size: 38px;
-  line-height: 57px;
-}
 img {
   transition: transform 0.3s;
 }
 img:hover {
   transform: scale(1.5);
 }
-.skillsContent {
+.skills {
   max-width: 100%;
+}
+.skillsContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-  transform: translateY(150px);
   opacity: 0;
-  transition: 2s all ease;
   padding: 50px;
-  width: 70%;
+  justify-items: center;
 }
 .skillsContent.active {
   transform: translateY(0);
   opacity: 1;
 }
 
+.skillProgress {
+  width: 100%;
+}
 .skillSummary,
 .skillProgress {
   max-width: 80%;
 }
 
-.skills h2 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.skills li {
+.skillProgress li {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr minmax(100px, 1fr);
+  grid-gap: 10px;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -170,6 +165,8 @@ img:hover {
   background-color: #ddd;
   border-radius: 5px;
   overflow: hidden;
+  position: absolute;
+  right: 0;
 }
 
 .skill-level span {
@@ -182,8 +179,8 @@ img:hover {
 @media screen and (max-width: 768px) {
   .skillsContent {
     grid-template-columns: 1fr;
-    justify-content: center;
-    width: 80%;
+    width: 100%;
+    padding: 10px;
   }
 }
 </style>

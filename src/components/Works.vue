@@ -98,7 +98,7 @@ export default {
 .timeline li:after {
   left: 20%;
 }
-/* 为了美观，偶数序号的树枝在PC界面上在右边，移动端屏幕保持一直伸向左边  */
+/* 为了美观，偶数序号的树枝在PC界面上伸向右边，移动端屏幕则会保持一直伸向左边  */
 .timeline li:nth-child(even) {
   align-items: flex-end;
   padding-right: 50px;
@@ -154,15 +154,43 @@ export default {
   border: 2px solid #34495e;
 }
 @media screen and (max-width: 768px) {
+  /* move the tree trunk to the right */
+  .timeline:before {
+    left: 100%;
+  }
+  /* stretch the tree branch */
+  .timeline li:before,
+  .timeline li:after {
+    left: 0%;
+  }
+  .timeline li:after {
+    width: 100%;
+  }
+  .timeline li {
+    padding-left: 0;
+  }
+  .timeline li:nth-child(even) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .timeline li p,
+  .timeline li h3,
+  .timeline li h4,
+  .timeline li time {
+    max-width: 100%;
+  }
   .timeline li:nth-child(even) {
     align-items: flex-start;
-    padding-left: 50px;
   }
 
   .timeline li:nth-child(even):before,
   .timeline li:nth-child(even):after {
-    left: 20%;
+    left: 0%;
     right: auto;
+  }
+
+  .timelineMarker {
+    left: calc(100% - 20px);
   }
 }
 </style>
