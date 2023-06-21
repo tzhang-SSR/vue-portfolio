@@ -8,5 +8,5 @@ module.exports = {
       .loader("@intlify/vue-i18n-loader")
       .end();
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-portoflio/" : "/",
+  publicPath: "/vue-portoflio/",
 };
