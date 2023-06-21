@@ -47,6 +47,9 @@ export default {
   </div>
 </template>
 <style scoped>
+h3 {
+  max-width: 100%;
+}
 .projectContent {
   height: 100%;
   padding: 50px;
@@ -89,7 +92,8 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .projectCard {
-    width: 60%;
+    width: 80%;
+    min-width: 300px;
   }
 }
 </style>
