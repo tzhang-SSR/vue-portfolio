@@ -1,7 +1,6 @@
 <script>
 import LanguagePicker from "./LanguagePicker.vue";
 import HamburgerSVG from "../assets/icons/hamburger.svg";
-import HTMLSVG from "../assets/icons/html.svg";
 
 export default {
   data() {
@@ -123,7 +122,7 @@ export default {
   min-width: 300px;
   height: 80px;
   z-index: 100;
-  background-color: #f5f0ff;
+  background-color: var(--vt-c-white);
 }
 .navbarContent {
   position: absolute;
@@ -172,7 +171,7 @@ a {
   top: 0;
   width: 100%;
   text-align: center;
-  background-color: #f5f0ff;
+  background-color: var(--vt-c-white);
 }
 .closeIcon {
   font-size: 25px;
